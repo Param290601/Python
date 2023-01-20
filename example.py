@@ -18,7 +18,6 @@ class Derived(Base):
 
 # Driver code
 obj1 = Base()
-obj2 = Derived()
 
 
 

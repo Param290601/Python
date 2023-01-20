@@ -30,14 +30,14 @@
 class A(object):
     department = "computer"
     a = 50
-    __b = 60
+    _b = 60
     # def __init__(self,name,id):
     #     self.name = name
     #     self.id = id
     def display(self):
         # print("Name: ",self.name, "ID no:",self.id)
         print("protected in parent",self._a)
-class B:
+class B(A):
     # def __init__(self,surname,native,name,id):
     #     self.surname = surname
     #     self.native = native
@@ -50,9 +50,11 @@ class B:
 
 
 b = B()
+a = A()
+print(a._b)
 # b.display()
 # print(b.department)
-b.display()
+# b.display()
 
 # a = A("param",56)
 # a.display()
