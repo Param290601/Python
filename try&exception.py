@@ -1,43 +1,11 @@
 # import sys
-while True:
-    try:
-        x = int(input("Please enter a number: "))
-        # break
-    except ValueError as err:
-        print("Oops!  That was no valid number.  Try again..." , err)
-        # break
-# class Student:
-#   marks = 0
-
-#   def compute_marks(self, obtained_marks):
-#     marks = obtained_marks
-#     print('Obtained Marks:', marks)
-
-# # convert compute_marks() to class method
-# Student.print_marks = classmethod(Student.compute_marks)
-# Student.print_marks(88)
-
-# Output: Obtained Marks: 88
-# from datetime import date
-
-# # random Person
-# class Person:
-#     def __init__(self, name, age):
-#         self.name = name
-#         self.age = age
-
-#     @classmethod
-#     def fromBirthYear(cls, name, birthYear):
-#         return cls(name, date.today().year - birthYear)
-
-#     def display(self):
-#         print(self.name + "'s age is: " + str(self.age))
-
-# person = Person('Adam', 19)
-# person.display()
-
-# person1 = Person.fromBirthYear('John',  1985)
-# # person1.display()
+# while True:
+#     try:
+#         x = int(input("Please enter a number: "))
+#         # break
+#     except ValueError as err:
+#         print("Oops!  That was no valid number.  Try again..." , err)
+#         # break
 
 # try:
 #     raise Exception('spam', 'eggs')
@@ -70,10 +38,10 @@ while True:
 
 # Exception Chaining
     
-# try:
-#     open("database.sqlite")
-# except OSError:
-#     raise RuntimeError("unable to handle error")
+try:
+    open("database.sqlite")
+except OSError:
+    raise RuntimeError("unable to handle error")
 
 # def bool_return():
 #     try:
@@ -82,3 +50,21 @@ while True:
 #         return False
 
 # print(bool_return())
+
+def divide(x, y):
+    try:
+        result = x / y
+    except ZeroDivisionError:
+        print("division by zero!")
+    else:
+        print("result is", result)
+    finally:
+        print("executing finally clause")
+
+divide(2, 1)
+
+
+divide(2, 0)
+
+
+divide("2", "1")
