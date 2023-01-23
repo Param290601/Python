@@ -1,11 +1,23 @@
 # import sys
-# while True:
-#     try:
-#         x = int(input("Please enter a number: "))
-#         break
-#     except ValueError as err:
-#         print("Oops!  That was no valid number.  Try again..." , err)
+while True:
+    try:
+        x = int(input("Please enter a number: "))
+        # break
+    except ValueError as err:
+        print("Oops!  That was no valid number.  Try again..." , err)
+        # break
+# class Student:
+#   marks = 0
 
+#   def compute_marks(self, obtained_marks):
+#     marks = obtained_marks
+#     print('Obtained Marks:', marks)
+
+# # convert compute_marks() to class method
+# Student.print_marks = classmethod(Student.compute_marks)
+# Student.print_marks(88)
+
+# Output: Obtained Marks: 88
 # from datetime import date
 
 # # random Person
@@ -54,7 +66,7 @@
 #     raise NameError('HiThere')
 # except NameError:
 #     print('An exception flew by!')
-#     raise
+    
 
 # Exception Chaining
     
@@ -63,10 +75,10 @@
 # except OSError:
 #     raise RuntimeError("unable to handle error")
 
-def bool_return():
-    try:
-        return True
-    finally:
-        return False
+# def bool_return():
+#     try:
+#         return True
+#     finally:
+#         return False
 
-print(bool_return())
+# print(bool_return())
